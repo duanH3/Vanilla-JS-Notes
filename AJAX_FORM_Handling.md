@@ -107,6 +107,11 @@ So we succesfully got a response from the server but we've gotten an error from 
 }
 ```
 
+# Reset error field
+```
+    $('form input, form select').removeClass('inputTxtError');
+    $('label.error').remove();
+```
 
 
 
