@@ -76,7 +76,7 @@ router.post('/ajax', function(req, res){
 
 ```
 
-#Client Side Result Error
+# Client Side - Response Error
 
 So we succesfully got a response from the server but we've gotten an error from one of the input and would like to display the invalid the input in red with the response message. Here's how.
 
@@ -92,7 +92,7 @@ So we succesfully got a response from the server but we've gotten an error from 
 });
 ```
 
-#CSS for error form
+# CSS for error form
 ```
 .error {
    color: #ff0000;
