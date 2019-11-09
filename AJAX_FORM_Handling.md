@@ -67,13 +67,44 @@ router.post('/ajax', function(req, res){
         res.status('500').json(errors);     //response with error status and compiled error json data
 
     } else {
-        // do something with response.message & data on success
+        // do something with response.status or data on success
         //res.status('200');
-        //res.status('200').json({type: 'ok', title: 'value', body: 'value'})
+        //res.status('200').json({type: 'msg', title: 'msg', body: 'msg'})
     }
 
 });
 
+```
+
+#Client Side Result Error
+
+So we succesfully got a response from the server but we've gotten an error from one of the input and would like to display the invalid the input in red with the response message. Here's how.
+
+```
+.fail(function (jqXHR, textStatus, errorThrown) {
+
+    //grab error of invalid input, and display error on individual fields
+    $.each(jqXHR.responseJSON, function(i, v) {
+        var msg = '<label class="error" for="'+i+'">'+v.msg+'</label>';
+        $('input[name="' + v.param + '"], select[name="' + v.param + '"]').addClass('inputTxtError').after(msg);
+    });
+
+});
+```
+
+#CSS for error form
+```
+.error {
+   color: #ff0000;
+   font-size: 12px;
+   margin-top: 5px;
+   margin-bottom: 0;
+}
+
+.inputTxtError {
+   border: 1px solid #ff0000;
+   color: #0e0e0e;
+}
 ```
 
 
