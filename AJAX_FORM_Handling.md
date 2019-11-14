@@ -1,4 +1,4 @@
-# This is not really vanilla JS but jquery but it get things done in 5mins
+# This is not vanilla JS but jquery and it get things done in 5mins
 
 # Multiple Form Field
 
