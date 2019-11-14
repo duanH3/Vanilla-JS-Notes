@@ -48,7 +48,7 @@ console.log(includesNum);
 
 # Find
 
-Returns true and/or the very first item it find in the array 
+The find() method returns the value of the first element in the provided array that satisfies the provided testing function.
 
 ```
 const items = [
@@ -62,6 +62,8 @@ const items = [
 const findItem = items.find((item) => {
   return item.name === 'PMD'
 })
+
+// expected result  {name: "PMD", price: 200}
 ```
 
 # foreach
