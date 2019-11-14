@@ -32,6 +32,8 @@ const items = [
 const itemNames = items.map(() => {
   return item.name  // or item.price
 })
+
+//expected reuslt [200, 100, 20, 30, 50]
 ```
 
 # Includes
@@ -43,7 +45,7 @@ const items = [1, 2, 3, 4, 5, 6, 7]
 
 const includesNum = items.includes(5)
 
-console.log(includesNum);
+console.log(includesNum); // true
 ```
 
 # Find
