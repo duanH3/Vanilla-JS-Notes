@@ -1,5 +1,27 @@
 # Vanilla JS Notes
 
+# Async Await
+Best explaination https://javascript.info/async-await
+
+In real situations, the promise may take some time before it rejects. In that case there will be a delay before await throws an error.
+
+We can catch that error using try..catch, the same way as a regular throw:
+```
+async function f() {
+
+  try {
+    let response = await fetch('/no-user-here');
+    let user = await response.json();
+  } catch(err) {
+    // catches errors both in fetch and response.json
+    alert(err);
+  }
+}
+
+f();
+```
+
+
 # Basic DOM
 
 Use innerHTML for creating new elements.
