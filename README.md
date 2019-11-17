@@ -14,7 +14,7 @@ async function f() {
     let user = await response.json();
   } catch(err) {
     // catches errors both in fetch and response.json
-    alert(err);
+    console.log(err);
   }
 }
 
