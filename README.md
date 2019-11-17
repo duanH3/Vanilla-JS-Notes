@@ -10,9 +10,12 @@ We can catch that error using try..catch, the same way as a regular throw:
 async function f() {
 
   try {
+  
     let response = await fetch('/no-user-here');
     let user = await response.json();
+    
   } catch(err) {
+  
     // catches errors both in fetch and response.json
     console.log(err);
   }
